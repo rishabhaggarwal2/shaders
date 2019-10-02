@@ -1,0 +1,28 @@
+{
+  "name": "Learning3D",
+  "version": "1.0.0",
+  "description": "New build",
+  "author": "Author",
+  "license": "MIT",
+  "main": "index.html",
+  "scripts": {
+    "serve": "browser-sync start --server --files \"*.html, prod/css/*.css, prod/js/*.js\"",
+    "watch:all": "npm-run -p serve",
+    "start": "npm run watch:all"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.6",
+    "browser-sync": "^2.18.8",
+    "node-sass": "^4.5.0",
+    "npm-run-all": "^4.0.2",
+    "onchange": "^6.1.0",
+    "postcss-cli": "^6.1.3",
+    "uglify-js": "^2.8.3"
+  },
+  "dependencies": {
+    "glslCanvas": "^0.1.7",
+    "install": "^0.13.0",
+    "npm": "^6.11.3",
+    "three": "^0.109.0"
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Learning Shaders</title>
+    <link rel="stylesheet" href="prod/css/main.css" />
+  </head>
+  <body>
+    <div id="container"></div>
+    <script
+      type="text/javascript"
+      src="node_modules/three/build/three.js"
+    ></script>
+    <script id="vertexShader" type="x-shader/x-vertex">
+      void main() {
+          gl_Position = vec4( position, 1.0 );
+      }
+    </script>
+    <script id="fragmentShader" type="x-shader/x-fragment">
+      uniform vec2 u_resolution;
+      uniform float u_time;
+
+      void main() {
+          vec2 st = gl_FragCoord.xy/u_resolution.xy;
+          gl_FragColor=vec4(st.x,st.y,0.0,1.0);
+      }
+    </script>
+    <script type="text/javascript" src="prod/js/main-three.js"></script>
+  </body>
+</html>
